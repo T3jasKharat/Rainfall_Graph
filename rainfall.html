@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dropdown Page</h1>
+        <select id="pageDropdown" onchange="navigate()">
+            <option value="">Select a village</option>
+            <option value="babhal_khunta.html">Babhal Khunta</option>
+            <option value="karegaon.html">Karegaon</option>
+            <option value="ekurka.html">Ekurka</option>
+            <option value="lonsawali.html">Lonsawali</option>
+            <option value="bodad.html">Bodad</option>
+            <option value="hiwargavhan.html">Hiwargavhan</option>
+            <option value="nipani_jawalka.html">Nipani jawalka</option>
+            <option value="limba.html">Limba</option>
+            <option value="tuljapur.html">Tuljapur</option>
+            <option value="tembha.html">Tembha</option>
+            <option value="neri.html">Neri</option>
+            <option value="wabgaon.html">Wabgaon</option>
+             
+        </select>
+    </div>
+
+    <script>
+        function navigate() {
+            var selectBox = document.getElementById("pageDropdown");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+
+            if (selectedValue !== "") {
+                window.location.href = selectedValue;
+            }
+        }
+    </script>
+</body>
+</html>
